@@ -15,7 +15,7 @@
   "author": "Anthony Stabile",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "http": "0.0.0",
+    "http-proxy": "^1.16.2"
   }
 }

@@ -11,7 +11,7 @@ function proxySite(hn, pn){
 var sites = [];
 //add sites here
 sites[0] = new proxySite('asepdesign.com', 8001);
-sites[1] = new proxySite('hotswapheroes.com', 8002);
+sites[1] = new proxySite('anthonystabile.com', 8002);
 
 //this creates a regular server and listens on port 80 (default web traffic port)
 http.createServer(function (req, res) {

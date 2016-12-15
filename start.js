@@ -15,8 +15,8 @@ function proxySite(hn, pn, df){
 };
 var sites = [];
 //add sites here
-var sites[0] = new proxySite('asepdesign.com', 8001);
-var sites[1] = new proxySIte('hotswapheroes.com', 8002);
+sites[0] = new proxySite('asepdesign.com', 8001);
+sites[1] = new proxySite('hotswapheroes.com', 8002);
 
 sites.forEach(function(ele){
 	ele.app.use(express.static(ele.dist));

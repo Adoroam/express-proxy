@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
       hostFound = true
     }
   })
-  if (!hostFound) vhost(sites[0])
+  if (!hostFound) vhost(sites[0].port)
 }).listen(80, function () {
   console.log('proxy listening on port 80')
 })

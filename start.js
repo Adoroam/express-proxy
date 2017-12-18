@@ -11,15 +11,8 @@ http.createServer(function (req, res) {
   function vhost (port) {
     proxy.web(req, res, { target: `http://localhost:${port}` })
   }
-
-  let hostFound = false
-  sites.forEach(site => {
-    if (req.headers.host === site.hostname) {
-      vhost(site.port)
-      hostFound = true
-    }
-  })
-  if (!hostFound) vhost(sites[0])
+  let found = sites.find(site => site.hostname === req.headers.host)
+  found ? vhost(found.port) : vhost(sites[0].port)
 }).listen(80, function () {
   console.log('proxy listening on port 80')
 })
